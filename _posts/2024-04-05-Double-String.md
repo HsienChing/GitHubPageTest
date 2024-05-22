@@ -1,5 +1,5 @@
 ---
-title: "使用Jekyll架網站時，網頁的顯示會出現奇怪的排版。該如何處理?"
+title: "使用Jekyll架網站時，"GitHub Pages"網頁的顯示會出現奇怪的排版。該如何處理?"
 date: 2024-05-22 10:21:00 +0800
 excerpt: ""
 categories: 
@@ -50,4 +50,3 @@ YouTube: [B. B. King - The Thrill Is Gone (Live at Montreux 1993) \| Stages](<ht
 YouTube: [B. B. King - The Thrill Is Gone (Live at Montreux 1993) \| Stages](<https://www.youtube.com/watch?v=4fk2prKnYnI>)
 
 NOTE: 在`|`前面加入`\`後，在本機或GitHub上看檔案時，也仍保持正常。
-
