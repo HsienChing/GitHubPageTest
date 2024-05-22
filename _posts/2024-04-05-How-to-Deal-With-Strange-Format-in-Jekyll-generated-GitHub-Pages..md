@@ -39,7 +39,7 @@ NOTE: 在本機或GitHub上看檔案時，一切都正常，一直到網頁在Gi
 
 ## 處理方式
 
-將Markdwon的檔案改寫，在`|`前面加入`\`。
+將Markdwon的檔案改寫，使用backslash escapes (`\`)，在`|`前面加入`\`。
 
 ```markdown
 YouTube: [B. B. King - The Thrill Is Gone (Live at Montreux 1993) \| Stages](<https://www.youtube.com/watch?v=4fk2prKnYnI>)
@@ -65,10 +65,14 @@ title: "使用Jekyll架網站時，"GitHub Pages"網頁的顯示會出現奇怪�
 
 ## 處理方式
 
-將Markdwon的檔案改寫，在`"`前面加入`\`。
+將Markdwon的檔案改寫，使用backslash escapes (`\`)，在`"`前面加入`\`。
 
 ```markdown
 title: "使用Jekyll架網站時，\"GitHub Pages\"網頁的顯示會出現奇怪的排版。該如何處理?"
 ```
 
 顯示就變正常了。
+
+# 相關Po文
+
+[GitHub Pages Post - Markdown File Template 01/#11-backslash-escapes](<https://hsienching.github.io/2024/03/31/GitHub-Pages-Post-Template-01/#11-backslash-escapes>)
