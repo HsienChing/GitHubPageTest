@@ -18,9 +18,17 @@ toc_label: "Table of contents"
 toc_icon: "columns"
 ---
 
+## 演奏欣賞
 
-YouTube: [||: 樂器狂人的蒐藏圖鑑1 :|| 曼陀林](<https://www.youtube.com/watch?v=oulDKgE5T4c>)    
-看到台南安平的許益彬老師，對曼陀鈴的狂熱跟推廣。
+YouTube: [Gibson 1918 A style mandolin](<https://www.youtube.com/watch?v=shAcHMs9_80>)
+
+YouTube: [Mandolin Comparison - Bourgeois, Randy Wood, Doug Clark & The Loar](<https://www.youtube.com/watch?v=TzN9ZGdz4oA>)
+
+YouTube: [Avi Avital - Vivaldi: Mandolin Concerto In C Major (Live)](<https://www.youtube.com/watch?v=aXBWrNN64z8>)
+
+YouTube: [Anatoly Beloshitsky - "In Spanish Style" \| Ekaterina Skliar, mandolin & Anna Kislitsyna, piano](<https://www.youtube.com/watch?v=xVkAQlybLT8>)
+
+------------------------
 
 
 
