@@ -21,20 +21,22 @@ toc_icon: "columns"
 在Markdown檔案中使用Liquid語法
 
 可使用
+{% raw %}
 ```markdown
 [Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-2)
 ```
+{% endraw %}
 
 效果:  
 [Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-2)
 
 NOTE: 如果不要連結到章節，請刪除`#section-2`。
 
-優點: 使用這個語法的好處是，不管在本機或者GitHub Page上，都可以順利連結到該post。這樣對於喜歡先在本機進行post預覽的人而言，很方便。只要本機預覽OK，那post上傳到GitHub後，GitHub Page的顯示也OK。
+優點: 使用這個語法的好處是，不管在本機或者GitHub Page上，都可以順利連結到該post。這樣對於喜歡先在本機進行post預覽的人而言，很方便。只要本機預覽OK，那post上傳到GitHub後，GitHub Page的顯示也OK。不用在上傳前，又要改一堆內部連結。
 
 # 2. 尋找解決方案
 
-Jekyll官方文件有說明。
+Jekyll官方文件有說明。以下簡單說明一下。
 
 REF:  
 Jekyll: [Tags Filters/#links](https://jekyllrb.com/docs/liquid/tags/#links)
@@ -140,9 +142,11 @@ Markdown語法:
 ### 3.2.2 方法2
 
 也可使用
+{% raw %}
 ```markdown
 [Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-1)
 ```
+{% endraw %}
 
 效果:  
 [Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-1)
@@ -195,7 +199,7 @@ Markdown語法:
 # 5. 感想
 
 1. Jekyll有很多好用的工具，方便架站者使用。
-2. 看起來，又要對網站連結大改版了。
+2. 看起來，又要對網站內部連結大改版了。
 
 # 6. 相關Po文
 
@@ -214,6 +218,10 @@ Jekyll: [Tags Filters/#links](https://jekyllrb.com/docs/liquid/tags/#links)
 Jekyll (GitHub): [docs/_docs/liquid/tags.md](https://github.com/jekyll/jekyll/blob/master/docs/_docs/liquid/tags.md)
 -->
 
+Jekyll: [Liquid Filters](https://jekyllrb.com/docs/liquid/filters/)
+
 Stack overflow: [jekyll markdown internal links](https://stackoverflow.com/questions/4629675/jekyll-markdown-internal-links)
 
 Jekyll: [Permalinks](https://jekyllrb.com/docs/permalinks/)
+
+MadeMistakes: [URLs and links in Jekyll](https://mademistakes.com/mastering-jekyll/how-to-link/)
