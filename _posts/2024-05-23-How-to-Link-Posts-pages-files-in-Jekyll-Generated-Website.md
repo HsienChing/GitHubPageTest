@@ -20,7 +20,6 @@ toc_icon: "columns"
 
 在Markdown檔案中使用Liquid語法
 
-可使用
 {% raw %}
 ```markdown
 [Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-2)
@@ -114,7 +113,7 @@ NOTE: 沒辦法使用Liquid filter，{% raw %}`{% link mypage.html | append: "#s
 
 ## 3.1 連結站內的post
 
-Markdown語法:
+使用語法:
 {% raw %}
 ```markdown
 [Link to a post]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %})
