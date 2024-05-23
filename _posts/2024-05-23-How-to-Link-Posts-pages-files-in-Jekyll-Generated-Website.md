@@ -30,7 +30,7 @@ toc_icon: "columns"
 效果:  
 [Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-2)
 
-NOTE: 如果不要連結到章節，請刪除`#section-2`。
+NOTE: 如果不要連結到章節，請刪除`#section-2`即可。
 
 優點: 使用這個語法的好處是，不管在本機或者GitHub Page上，都可以順利連結到該post。這樣對於喜歡先在本機進行post預覽的人而言，很方便。只要本機預覽OK，那post上傳到GitHub後，GitHub Page的顯示也OK。不用在上傳前，又要改一堆內部連結。
 
@@ -67,11 +67,11 @@ Jekyll: [Tags Filters/#links](https://jekyllrb.com/docs/liquid/tags/#links)
 ```
 {% endraw %}
 
-這個`link` tag是建造一個相對於跟目錄(`/`)的路徑。
+這個`link` tag是建造一個相對於根目錄(`/`)的路徑。
 
 使用`link` tag有個好處，就是驗證連結。當連結不存在時，Jekyll不會build站點。這樣會提醒架站者去修正問題。
 
-可能會看到的Error message長這樣
+當連結不存在時，可能會看到的Error message長這樣
 ```
 Liquid Exception: Could not find document '_posts/[name-of-post].md' in tag 'link'. 
 Make sure the document exists and the path is correct. 
@@ -126,22 +126,24 @@ Markdown語法:
 
 ## 3.2 連結站內的post的章節
 
-假設要連到站內某個post下面的章節。  
+假設要連到站內某個post下面的某個章節。  
 例如: `2024-05-23-Test-Post-01.md`這個post下面有三個section。
 
 ### 3.2.1 方法1
 
-可使用
+使用語法:
+{% raw %}
 ```markdown
 [Link to a post section]({{ site.url }}{{ site.baseurl }}/2024/05/23/Test-Post-01/#section-1)
 ```
+{% endraw %}
 
 效果:  
 [Link to a post section]({{ site.url }}{{ site.baseurl }}/2024/05/23/Test-Post-01/#section-1)
 
 ### 3.2.2 方法2
 
-也可使用
+使用語法:
 {% raw %}
 ```markdown
 [Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-1)
@@ -172,13 +174,14 @@ NOTE:
 
 ## 3.3 連結站內的檔案
 
-Markdown語法:
+使用語法:
 {% raw %}
 ```markdown
 [Link to a figure file]({{ site.baseurl }}{% link /assets/images/2024/This-is-a-Figure-1920px-1080px.jpg %})
 ```
 {% endraw %}
 
+效果:  
 [Link to a figure file]({{ site.baseurl }}{% link /assets/images/2024/This-is-a-Figure-1920px-1080px.jpg %})
 
 # 4. 延伸使用
@@ -192,7 +195,7 @@ Markdown語法:
 ```
 {% endraw %}
 
-效果:
+效果:  
 ![Link to a figure]({{ site.baseurl }}{% link /assets/images/2024/This-is-a-Figure-1920px-1080px.jpg %})
 
 
