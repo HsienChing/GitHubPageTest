@@ -20,15 +20,17 @@ toc_icon: "columns"
 
 在Markdown檔案中使用Liquid語法
 
-也可使用
+可使用
 ```markdown
-[Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-1)
+[Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-2)
 ```
 
 效果:  
-[Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section2)
+[Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-2)
 
 NOTE: 如果不要連結到章節，請刪除`#section-2`。
+
+優點: 使用這個語法的好處是，不管在本機或者GitHub Page上，都可以順利連結到該post。這樣對於喜歡先在本機進行post預覽的人而言，很方便。只要本機預覽OK，那post上傳到GitHub後，GitHub Page的顯示也OK。
 
 # 2. 尋找解決方案
 
