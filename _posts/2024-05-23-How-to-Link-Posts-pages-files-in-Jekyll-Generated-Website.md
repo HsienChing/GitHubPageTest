@@ -1,6 +1,7 @@
 ---
 title: "在使用Jekyll建置的網頁中，該如何在Markdown檔案中，連結站內資源。例如: post, page, collection item, file等。"
 date: 2024-05-23 00:30:00 +0800
+excerpt: ""
 categories:
   - GitHub Pages
 tags:
@@ -11,7 +12,26 @@ tags:
 
 在使用Jekyll建置的網頁中，該如何在Markdown檔案中，連結站內資源。例如: post, page, collection item, file等。
 
-# 解決方案
+# 結論
+
+在Markdown檔案中使用Liquid語法
+
+也可使用
+```markdown
+[Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-1)
+```
+
+效果:  
+[Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section2)
+
+NOTE: 如果不要連結到章節，請刪除`#section-2`。
+
+# 尋找解決方案
+
+Jekyll官方文件有說明。
+
+REF:  
+Jekyll: [Tags Filters/#links](https://jekyllrb.com/docs/liquid/tags/#links)
 
 ## Linking to pages
 
@@ -45,7 +65,9 @@ tags:
 
 可能會看到的Error message長這樣
 ```
-Liquid Exception: Could not find document '_posts/[name-of-post].md' in tag 'link'. Make sure the document exists and the path is correct. in D:/Jekyll/[name-of-site]/_posts/[name-of-post].md
+Liquid Exception: Could not find document '_posts/[name-of-post].md' in tag 'link'. 
+Make sure the document exists and the path is correct. 
+in D:/Jekyll/[name-of-site]/_posts/[name-of-post].md
 ```
 
 ## Linking to posts
@@ -96,23 +118,29 @@ Markdown語法:
 
 ## 連結站內的post的章節
 
-假設要連到某個post下面的章節，例如: <https://hsienching.github.io/GitHubPageTest/2024/05/23/Test-Post-01/#section1>
+假設要連到某個post下面的章節。
+
+### 方法1
 
 可使用
 ```markdown
-[Link to a post section]({{ site.url }}{{ site.baseurl }}/2024/05/23/Test-Post-01/#section1)
+[Link to a post section]({{ site.url }}{{ site.baseurl }}/2024/05/23/Test-Post-01/#section-1)
 ```
 
 效果:  
-[Link to a post section]({{ site.url }}{{ site.baseurl }}/2024/05/23/Test-Post-01/#section1)
+[Link to a post section]({{ site.url }}{{ site.baseurl }}/2024/05/23/Test-Post-01/#section-1)
+
+### 方法2
 
 也可使用
 ```markdown
-[Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section1)
+[Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-1)
 ```
 
 效果:  
-[Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section1)
+[Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-1)
+
+### 不行的方法
 
 沒辦法使用Liquid filter去連結到章節。
 {% raw %}
@@ -127,7 +155,7 @@ NOTE:
 
 {% raw %}
 ```markdown
-[Section of Link]({% link _posts/2024-05-23-Test-Post-01.md | append: "#section1" %})
+[Section of Link]({% link _posts/2024-05-23-Test-Post-01.md | append: "#section-1" %})
 ```
 {% endraw %}
 
