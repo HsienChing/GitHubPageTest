@@ -12,7 +12,7 @@ tags:
 
 在使用Jekyll建置的網頁中，該如何在Markdown檔案中，連結站內資源。例如: post, page, collection item, file等。
 
-# 結論
+# 1. 結論
 
 在Markdown檔案中使用Liquid語法
 
@@ -26,14 +26,14 @@ tags:
 
 NOTE: 如果不要連結到章節，請刪除`#section-2`。
 
-# 尋找解決方案
+# 2. 尋找解決方案
 
 Jekyll官方文件有說明。
 
 REF:  
 Jekyll: [Tags Filters/#links](https://jekyllrb.com/docs/liquid/tags/#links)
 
-## Linking to pages
+## 2.1 Linking to pages
 
 可使用`link` tag來產生permalink URL。這樣有一個好處，如果permalink style改變了，那這個`link` tag仍然有效，讓網頁仍然可以連到。
 
@@ -70,7 +70,7 @@ Make sure the document exists and the path is correct.
 in D:/Jekyll/[name-of-site]/_posts/[name-of-post].md
 ```
 
-## Linking to posts
+## 2.2 Linking to posts
 
 使用`post_url` tag可以產生post的permalink URL。
 
@@ -102,9 +102,9 @@ NOTE: `post_url`與`link`這兩個方式相比較，使用`post_url`可省略打
 
 NOTE: 沒辦法使用Liquid filter，{% raw %}`{% link mypage.html | append: "#section1" %}`{% endraw %}去連結到章節。
 
-# 使用案例
+# 3. 使用案例
 
-## 連結站內的post
+## 3.1 連結站內的post
 
 Markdown語法:
 {% raw %}
@@ -116,12 +116,12 @@ Markdown語法:
 效果:
 [Link to a post]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %})
 
-## 連結站內的post的章節
+## 3.2 連結站內的post的章節
 
 假設要連到站內某個post下面的章節。  
 例如: `2024-05-23-Test-Post-01.md`這個post下面有三個section。
 
-### 方法1
+### 3.2.1 方法1
 
 可使用
 ```markdown
@@ -131,7 +131,7 @@ Markdown語法:
 效果:  
 [Link to a post section]({{ site.url }}{{ site.baseurl }}/2024/05/23/Test-Post-01/#section-1)
 
-### 方法2
+### 3.2.2 方法2
 
 也可使用
 ```markdown
@@ -141,7 +141,7 @@ Markdown語法:
 效果:  
 [Link to a post section]({{ site.baseurl }}{% link _posts/2024-05-23-Test-Post-01.md %}#section-1)
 
-### 不行的方法
+### 3.2.3 不行的方法
 
 沒辦法使用Liquid filter去連結到章節。
 {% raw %}
@@ -160,7 +160,7 @@ NOTE:
 ```
 {% endraw %}
 
-## 連結站內的檔案
+## 3.3 連結站內的檔案
 
 Markdown語法:
 {% raw %}
@@ -171,9 +171,9 @@ Markdown語法:
 
 [Link to a figure file]({{ site.baseurl }}{% link /assets/images/2024/This-is-a-Figure-1920px-1080px.jpg %})
 
-# 延伸使用
+# 4. 延伸使用
 
-## 顯示站內圖檔
+## 4.1 顯示站內圖檔
 
 Markdown語法:
 {% raw %}
@@ -186,12 +186,12 @@ Markdown語法:
 ![Link to a figure]({{ site.baseurl }}{% link /assets/images/2024/This-is-a-Figure-1920px-1080px.jpg %})
 
 
-# 感想
+# 5. 感想
 
 1. Jekyll有很多好用的工具，方便架站者使用。
 2. 看起來，又要對網站連結大改版了。
 
-# 相關Po文
+# 6. 相關Po文
 
 
 
@@ -201,7 +201,7 @@ Markdown語法:
 
 
 
-# 相關連結
+# 7. 相關連結
 
 Jekyll: [Tags Filters/#links](https://jekyllrb.com/docs/liquid/tags/#links)
 <!--
