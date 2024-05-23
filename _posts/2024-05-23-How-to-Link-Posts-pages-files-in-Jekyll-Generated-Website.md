@@ -8,6 +8,10 @@ tags:
   - Jekyll
   - Liquid
   - Markdown
+toc: true
+toc_sticky: false
+toc_label: "Table of contents"
+toc_icon: "columns"
 ---
 
 在使用Jekyll建置的網頁中，該如何在Markdown檔案中，連結站內資源。例如: post, page, collection item, file等。
